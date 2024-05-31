@@ -37,6 +37,38 @@ export default function App() {
           <Text style={styles.word}>Categories</Text>
          
         </View>
+        <View style={styles.image}>
+              <View style={styles.picture}>
+                <Text style={styles.exercise}>Exercise</Text>
+                <Text style={styles.task}>12 tasks</Text>
+                <Image source={require('./assets/lady.png')} style={styles.ladyPic} />
+
+              </View>
+              <View style={styles.mail}>
+                <Text style={styles.exercise}>Study</Text>
+                <Text style={styles.task}>12 tasks</Text>
+                <Image source={require('./assets/deskLady.png')} style={styles.ladyPic} />
+
+              </View>
+         </View>
+         <View style={styles.cont}>
+          <Text style={styles.word}>Ongoing tasks</Text>
+         
+        </View>
+        <View style={styles.visual}>
+          <Text style={styles.verb}>Mobile App development</Text>
+         
+        </View>
+        <View style={styles.visual}>
+          <Text style={styles.verb}>Web Development</Text>
+         
+        </View>
+        <View style={styles.visual}>
+          <Text style={styles.verb}>Push ups </Text>
+         
+        </View>
+
+
     </View>
   );
 }
@@ -44,7 +76,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F7F0E8',
+    backgroundColor: '#F7ECE8',
     padding: 20,
   },
   text: {
@@ -56,6 +88,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 70,
+    
   },
   profileImage: {
     width: 50,
@@ -70,6 +103,7 @@ const styles = StyleSheet.create({
   },
   searchContainer: {
     flexDirection: 'row',
+    
    
     marginTop: 20,
   },
@@ -81,6 +115,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingHorizontal: 10,
     width: '80%',
+    backgroundColor: 'white',
   },
   searchIcon: {
     width: 21,
@@ -93,6 +128,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft: 0,
     width: 100,
+    fontWeight: 'bold',
   },
 settingsImage:{
 
@@ -104,5 +140,48 @@ settingsImage:{
 word: {
   fontSize: 20,
   marginTop:30,
-}
+  fontWeight: 'bold',
+},
+
+picture: {
+  marginTop: 20,
+},
+exercise: {
+  fontSize: 17,
+  fontWeight: 'bold',
+},
+task: {
+ 
+  fontSize: 12,
+},
+ladyPic: {
+  width: 90,
+    height: 90,
+    marginTop: 20,
+   
+   
+},
+image: {
+  flexDirection: 'row',
+},
+mail: {
+  marginLeft:150,
+  marginTop: 20,
+},
+visual: {
+  backgroundColor:'#808080',
+  alignItems: 'left',
+  justifyContent: 'center',
+  padding: 10,
+  marginTop: 15,
+  height: 100,
+  borderRadius: 15,
+  borderColor:'red',
+  borderWidth: 1,
+},
+verb: {
+  marginBottom: 5,
+  fontSize: 17,
+  fontWeight:'bold',
+},
 });
