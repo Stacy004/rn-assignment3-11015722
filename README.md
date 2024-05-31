@@ -29,7 +29,7 @@ Used for displaying icons and images, enhancing the visual appeal of the app.
 This task management app allows users to organize their tasks efficiently by categorizing them into different categories such as Exercise, Study, Clean, Cook, etc. Users can create new tasks, view ongoing tasks, and manage them effectively.
 
 # pictures
-![alt text](./assets/epic 2.jpg>)
+![alt text](./assets/epic 2.jpg)
 ![alt text](./assets/epic.jpg)
 
 
