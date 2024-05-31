@@ -18,6 +18,7 @@ export default function App() {
           <Text style={styles.text}>Hello, Devs</Text>
           <Text style={styles.task}>14 tasks today</Text>
         </View>
+        
         <Image source={require('./assets/pp.png')} style={styles.profileImage} />
       </View>
       <View style={styles.searchContainer}>
@@ -30,6 +31,7 @@ export default function App() {
             value={searchText}
           />
         </View>
+        
         <Image source={require('./assets/Settings.png')} style={styles.settingsImage} />
       </View>
       <StatusBar style="auto" />
@@ -94,12 +96,14 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 25,
+    backgroundColor: 'white',
   },
   cont: {
     alignItems: 'left',
   },
   task: {
     fontSize: 10,
+    marginLeft: 2,
   },
   searchContainer: {
     flexDirection: 'row',
@@ -116,6 +120,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     width: '80%',
     backgroundColor: 'white',
+    color: 'black',
   },
   searchIcon: {
     width: 21,
@@ -145,19 +150,26 @@ word: {
 
 picture: {
   marginTop: 20,
+  backgroundColor: 'white',
+  width: 170,
+  borderRadius: 20,
 },
 exercise: {
   fontSize: 17,
   fontWeight: 'bold',
+  marginLeft: 20,
+
 },
 task: {
- 
+  marginLeft: 20,
   fontSize: 12,
 },
 ladyPic: {
   width: 90,
     height: 90,
     marginTop: 20,
+    marginLeft: 30,
+    marginBottom: 10,
    
    
 },
@@ -165,22 +177,27 @@ image: {
   flexDirection: 'row',
 },
 mail: {
-  marginLeft:150,
+  marginLeft:30,
   marginTop: 20,
+  backgroundColor: 'white',
+  width: 250,
+  borderRadius: 20,
+
 },
 visual: {
   backgroundColor:'#808080',
   alignItems: 'left',
   justifyContent: 'center',
   padding: 10,
-  marginTop: 15,
+  marginTop: 14,
   height: 100,
   borderRadius: 15,
-  borderColor:'red',
+  borderColor:'#E8D1BA',
   borderWidth: 1,
+  backgroundColor: 'white',
 },
 verb: {
-  marginBottom: 5,
+  marginBottom: 7,
   fontSize: 17,
   fontWeight:'bold',
 },
