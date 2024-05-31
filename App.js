@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, ScrollView } from 'react-native';
 
 export default function App() {
   const [searchText, setSearchText] = useState('');
@@ -12,13 +12,12 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.content}>
         <View style={styles.cont}>
           <Text style={styles.text}>Hello, Devs</Text>
           <Text style={styles.task}>14 tasks today</Text>
         </View>
-        
         <Image source={require('./assets/pp.png')} style={styles.profileImage} />
       </View>
       <View style={styles.searchContainer}>
@@ -31,47 +30,71 @@ export default function App() {
             value={searchText}
           />
         </View>
-        
         <Image source={require('./assets/Settings.png')} style={styles.settingsImage} />
       </View>
       <StatusBar style="auto" />
       <View style={styles.cont}>
-          <Text style={styles.word}>Categories</Text>
-         
+        <Text style={styles.word}>Categories</Text>
+      </View>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.categoriesScroll}>
+        <View style={styles.picture}>
+          <Text style={styles.exercise}>Exercise</Text>
+          <Text style={styles.task}>12 tasks</Text>
+          <Image source={require('./assets/lady.png')} style={styles.ladyPic} />
         </View>
-        <View style={styles.image}>
-              <View style={styles.picture}>
-                <Text style={styles.exercise}>Exercise</Text>
-                <Text style={styles.task}>12 tasks</Text>
-                <Image source={require('./assets/lady.png')} style={styles.ladyPic} />
-
-              </View>
-              <View style={styles.mail}>
-                <Text style={styles.exercise}>Study</Text>
-                <Text style={styles.task}>12 tasks</Text>
-                <Image source={require('./assets/deskLady.png')} style={styles.ladyPic} />
-
-              </View>
-         </View>
-         <View style={styles.cont}>
-          <Text style={styles.word}>Ongoing tasks</Text>
-         
+        <View style={styles.picture}>
+          <Text style={styles.exercise}>Study</Text>
+          <Text style={styles.task}>8 tasks</Text>
+          <Image source={require('./assets/deskLady.png')} style={styles.ladyPic} />
         </View>
-        <View style={styles.visual}>
-          <Text style={styles.verb}>Mobile App development</Text>
-         
+        <View style={styles.picture}>
+          <Text style={styles.exercise}>Work</Text>
+          <Text style={styles.task}>10 tasks</Text>
+          <Image source={require('./assets/work.png')} style={styles.ladyPic} />
         </View>
-        <View style={styles.visual}>
-          <Text style={styles.verb}>Web Development</Text>
-         
+        <View style={styles.picture}>
+          <Text style={styles.exercise}>Cooking</Text>
+          <Text style={styles.task}>5 tasks</Text>
+          <Image source={require('./assets/foo.jpg')} style={styles.ladyPic} />
         </View>
-        <View style={styles.visual}>
-          <Text style={styles.verb}>Push ups </Text>
-         
+        <View style={styles.picture}>
+          <Text style={styles.exercise}>Cleaning</Text>
+          <Text style={styles.task}>3 tasks</Text>
+          <Image source={require('./assets/water.webp')} style={styles.ladyPic} />
         </View>
-
-
-    </View>
+        <View style={styles.picture}>
+          <Text style={styles.exercise}>Reading</Text>
+          <Text style={styles.task}>6 tasks</Text>
+          <Image source={require('./assets/read.png')} style={styles.ladyPic} />
+        </View>
+        <View style={styles.picture}>
+          <Text style={styles.exercise}>Meditation</Text>
+          <Text style={styles.task}>4 tasks</Text>
+          <Image source={require('./assets/yoga.webp')} style={styles.ladyPic} />
+        </View>
+      </ScrollView>
+      <View style={styles.cont}>
+        <Text style={styles.word}>Ongoing tasks</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Mobile App development</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Web Development</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Push ups</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Assignments</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Work out</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Chores</Text>
+      </View>
+    </ScrollView>
   );
 }
 
@@ -90,7 +113,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 70,
-    
   },
   profileImage: {
     width: 50,
@@ -99,7 +121,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   cont: {
-    alignItems: 'left',
+    alignItems: 'flex-start',
   },
   task: {
     fontSize: 10,
@@ -107,8 +129,6 @@ const styles = StyleSheet.create({
   },
   searchContainer: {
     flexDirection: 'row',
-    
-   
     marginTop: 20,
   },
   searchBox: {
@@ -120,7 +140,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     width: '80%',
     backgroundColor: 'white',
-    color: 'black',
   },
   searchIcon: {
     width: 21,
@@ -128,77 +147,58 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   searchInput: {
-    flex: 1, 
+    flex: 1,
     height: 50,
     fontSize: 16,
-    marginLeft: 0,
-    width: 100,
     fontWeight: 'bold',
   },
-settingsImage:{
-
-  width: 50,
+  settingsImage: {
+    width: 50,
     height: 50,
     borderRadius: 25,
     marginLeft: 10,
-},
-word: {
-  fontSize: 20,
-  marginTop:30,
-  fontWeight: 'bold',
-},
-
-picture: {
-  marginTop: 20,
-  backgroundColor: 'white',
-  width: 170,
-  borderRadius: 20,
-},
-exercise: {
-  fontSize: 17,
-  fontWeight: 'bold',
-  marginLeft: 20,
-
-},
-task: {
-  marginLeft: 20,
-  fontSize: 12,
-},
-ladyPic: {
-  width: 90,
-    height: 90,
+    borderColor: 'red',
+    borderWidth: 2,
+  },
+  word: {
+    fontSize: 20,
+    marginTop: 30,
+    fontWeight: 'bold',
+  },
+  categoriesScroll: {
     marginTop: 20,
-    marginLeft: 30,
-    marginBottom: 10,
-   
-   
-},
-image: {
-  flexDirection: 'row',
-},
-mail: {
-  marginLeft:30,
-  marginTop: 20,
-  backgroundColor: 'white',
-  width: 250,
-  borderRadius: 20,
-
-},
-visual: {
-  backgroundColor:'#808080',
-  alignItems: 'left',
-  justifyContent: 'center',
-  padding: 10,
-  marginTop: 14,
-  height: 100,
-  borderRadius: 15,
-  borderColor:'#E8D1BA',
-  borderWidth: 1,
-  backgroundColor: 'white',
-},
-verb: {
-  marginBottom: 7,
-  fontSize: 17,
-  fontWeight:'bold',
-},
+  },
+  picture: {
+    marginRight: 10,
+    backgroundColor: 'white',
+    width: 170,
+    borderRadius: 20,
+    padding: 10,
+    alignItems: 'center',
+  },
+  exercise: {
+    fontSize: 17,
+    fontWeight: 'bold',
+  },
+  ladyPic: {
+    width: 90,
+    height: 90,
+    marginTop: 10,
+  },
+  visual: {
+    backgroundColor: 'white',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    padding: 10,
+    marginTop: 14,
+    height: 100,
+    borderRadius: 15,
+    borderColor: '#E8D1BA',
+    borderWidth: 1,
+  },
+  verb: {
+    marginBottom: 7,
+    fontSize: 17,
+    fontWeight: 'bold',
+  },
 });
