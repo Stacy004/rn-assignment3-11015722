@@ -1,11 +1,36 @@
-# ID 11015722
-# Description
+README: React Native Task Management App
+
+This is a Task Management App  designed to help users organize and manage their tasks efficiently. It includes various features such as categorizing tasks into different categories, and displaying ongoing tasks.
+
+# Components Usage:
+# View:
+Used for grouping and arranging other components.
+
+# Text:
+used for displaying text content.
+
+# ScrollView:
+Used for scrolling through lists of tasks if they exceed the screen height.
+
+# TextInput:
+Used for capturing user input, such as task names.
+
+# Stylesheet:
+Used for defining styles for components, including layout, colors, and typography.
+
+# FlatList or SectionList:
+Used for rendering lists of tasks in a scrollable format, allowing users to view and interact with each task individually.
+
+# Image:
+Used for displaying icons and images, enhancing the visual appeal of the app.
 
 
-For my app.js file, i made the backgrown colour of my app goldenrod colour represented by the code "D52" in hexadecimal 3 bit form. 
-I edited the component name with my actual name after using the given statement which was " My name is YourNamee". 
-The font size was later increase to 24 after giving the text an id 
-Latly, i made my name 'Anastasia' bold by giving it a separate identity.
+# Description:
+This task management app allows users to organize their tasks efficiently by categorizing them into different categories such as Exercise, Study, Clean, Cook, etc. Users can create new tasks, view ongoing tasks, and manage them effectively.
 
-# screenshot
-![Screenshot](screenshot.jpg)
+# pictures
+![alt text](<../assets/epic 2.jpg>)
+![alt text](../assets/epic.jpg)
+
+
+
