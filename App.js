@@ -72,6 +72,11 @@ export default function App() {
           <Text style={styles.task}>4 tasks</Text>
           <Image source={require('./assets/yoga.webp')} style={styles.ladyPic} />
         </View>
+        <View style={styles.picture}>
+          <Text style={styles.exercise}>Volunteering</Text>
+          <Text style={styles.task}>4 tasks</Text>
+          <Image source={require('./assets/volunteer.jpg')} style={styles.ladyPic} />
+        </View>
       </ScrollView>
       <View style={styles.cont}>
         <Text style={styles.word}>Ongoing tasks</Text>
@@ -93,6 +98,30 @@ export default function App() {
       </View>
       <View style={styles.visual}>
         <Text style={styles.verb}>Chores</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Assignments</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Painting</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Writing</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Gardening</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Travel planning</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Music practice</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>shopping</Text>
+      </View>
+      <View style={styles.visual}>
+        <Text style={styles.verb}>Pet care</Text>
       </View>
     </ScrollView>
   );
@@ -157,7 +186,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 25,
     marginLeft: 10,
-    borderColor: 'red',
+    
     borderWidth: 2,
   },
   word: {
